@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springmvc.dao.TeacherInfoMapper">
+  <resultMap id="BaseResultMap" type="com.springmvc.entity.TeacherInfo">
+    <id column="tnumber" jdbcType="INTEGER" property="tnumber" />
+    <result column="tpassword" jdbcType="VARCHAR" property="tpassword" />
+    <result column="tname" jdbcType="VARCHAR" property="tname" />
+    <result column="tidentity" jdbcType="INTEGER" property="tidentity" />
+    <result column="tdepartment" jdbcType="VARCHAR" property="tdepartment" />
+    <result column="tmajor" jdbcType="VARCHAR" property="tmajor" />
+    <result column="tphone" jdbcType="VARCHAR" property="tphone" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    tnumber, tpassword, tname, tidentity, tdepartment, tmajor, tphone
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from teacher_info
+    where tnumber = #{tnumber,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectSelective" resultMap="BaseResultMap" parameterType="com.springmvc.entity.TeacherInfo">
+    select
+    <include refid="Base_Column_List" />
+    from teacher_info
+    <where>
+      <if test="tnumber != null">
+        tnumber = #{tnumber,jdbcType=INTEGER}
+      </if>
+      <if test="tpassword != null">
+        AND tpassword = #{tpassword,jdbcType=VARCHAR}
+      </if>
+      <if test="tname != null">
+        AND tname = #{tname,jdbcType=VARCHAR}
+      </if>
+      <if test="tidentity != null">
+        AND tidentity = #{tidentity,jdbcType=INTEGER}
+      </if>
+      <if test="tdepartment != null">
+        AND tdepartment = #{tdepartment,jdbcType=VARCHAR}
+      </if>
+      <if test="tmajor !- null">
+        AND tmajor = #{tmajor,jdbcType=VARCHR}
+      </if>
+      <if test="tphone != null">
+        AND tphone = #{tphone,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from teacher_info
+    where tnumber = #{tnumber,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.springmvc.entity.TeacherInfo">
+    insert into teacher_info (tnumber, tpassword, tname, 
+      tidentity, tdepartment, tmajor, 
+      tphone)
+    values (#{tnumber,jdbcType=INTEGER}, #{tpassword,jdbcType=VARCHAR}, #{tname,jdbcType=VARCHAR}, 
+      #{tidentity,jdbcType=INTEGER}, #{tdepartment,jdbcType=VARCHAR}, #{tmajor,jdbcType=VARCHAR}, 
+      #{tphone,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.springmvc.entity.TeacherInfo">
+    insert into teacher_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="tnumber != null">
+        tnumber,
+      </if>
+      <if test="tpassword != null">
+        tpassword,
+      </if>
+      <if test="tname != null">
+        tname,
+      </if>
+      <if test="tidentity != null">
+        tidentity,
+      </if>
+      <if test="tdepartment != null">
+        tdepartment,
+      </if>
+      <if test="tmajor != null">
+        tmajor,
+      </if>
+      <if test="tphone != null">
+        tphone,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="tnumber != null">
+        #{tnumber,jdbcType=INTEGER},
+      </if>
+      <if test="tpassword != null">
+        #{tpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="tname != null">
+        #{tname,jdbcType=VARCHAR},
+      </if>
+      <if test="tidentity != null">
+        #{tidentity,jdbcType=INTEGER},
+      </if>
+      <if test="tdepartment != null">
+        #{tdepartment,jdbcType=VARCHAR},
+      </if>
+      <if test="tmajor != null">
+        #{tmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="tphone != null">
+        #{tphone,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.springmvc.entity.TeacherInfo">
+    update teacher_info
+    <set>
+      <if test="tpassword != null">
+        tpassword = #{tpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="tname != null">
+        tname = #{tname,jdbcType=VARCHAR},
+      </if>
+      <if test="tidentity != null">
+        tidentity = #{tidentity,jdbcType=INTEGER},
+      </if>
+      <if test="tdepartment != null">
+        tdepartment = #{tdepartment,jdbcType=VARCHAR},
+      </if>
+      <if test="tmajor != null">
+        tmajor = #{tmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="tphone != null">
+        tphone = #{tphone,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where tnumber = #{tnumber,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.springmvc.entity.TeacherInfo">
+    update teacher_info
+    set tpassword = #{tpassword,jdbcType=VARCHAR},
+      tname = #{tname,jdbcType=VARCHAR},
+      tidentity = #{tidentity,jdbcType=INTEGER},
+      tdepartment = #{tdepartment,jdbcType=VARCHAR},
+      tmajor = #{tmajor,jdbcType=VARCHAR},
+      tphone = #{tphone,jdbcType=VARCHAR}
+    where tnumber = #{tnumber,jdbcType=INTEGER}
+  </update>
+</mapper>

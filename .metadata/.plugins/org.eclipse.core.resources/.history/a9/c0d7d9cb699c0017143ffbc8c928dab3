@@ -1,0 +1,5 @@
+package com.schedulemanagement.model;
+
+public class Manager {
+
+}
