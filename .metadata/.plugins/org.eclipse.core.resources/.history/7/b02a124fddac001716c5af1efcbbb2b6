@@ -1,0 +1,12 @@
+<html>
+<head>
+<title>ErrorPage</title>
+</head>
+<%@ page language="java" isErrorPage="true" contentType="text/html; charset=GBK" %>
+<body>
+<p>
+当前页面是: Page3 <br>
+</p>
+<% out.print(exception.toString()); %>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>HTML表单</title>
+</head>
+<%@ page contentType="text/html; charset=GBK" %>
+<body>
+	<form action="Page11.jsp" method="post">
+		<p>姓名: <input type="text" size="20" name="UserID"></p>
+		<p>密码: <input type="password" size="20" name="UserPWD"></p>
+		<p><input type="submit" value="提交"></p>	
+	</form>
+	<br>
+	<form action="Page12.jsp" method="post">
+		<p>姓名: <input type="text" size="20" name="UserID"></p>
+		<p>密码: <input type="password" size="20" name="UserPWD"></p>
+		<p><input type="submit" value="提交"></p>	
+	</form>
+</body>
+</html>

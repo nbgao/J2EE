@@ -1,0 +1,11 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>ErrorPage</title>
+</head>
+<%@ page language="java" isErrorPage="true" contentType="text/html; charset=GBK" %>
+<body>
+µ±Ç°Ò³ÃæÊÇ: Page3.jsp<br>
+<% out.print(exception.toString()); %>
+</body>
+</html>

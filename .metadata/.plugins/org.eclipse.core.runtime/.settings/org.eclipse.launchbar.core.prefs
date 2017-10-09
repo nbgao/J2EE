@@ -1,8 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:spring-mvc-study,org.eclipse.launchbar.core.descriptorType.default\:Tomcat v9.0 Server at localhost 2,org.eclipse.launchbar.core.descriptorType.default\:New_configuration,org.eclipse.launchbar.core.descriptorType.default\:FindYou,org.eclipse.launchbar.core.descriptorType.default\:activity_main.xml,org.eclipse.launchbar.core.descriptorType.default\:Tomcat v9.0 Server at localhost
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:New_configuration,org.eclipse.launchbar.core.descriptorType.default\:JdbcTest,org.eclipse.launchbar.core.descriptorType.default\:JdbcTest3 (2),org.eclipse.launchbar.core.descriptorType.default\:JdbcTest2,org.eclipse.launchbar.core.descriptorType.default\:JdbcTest1 (1),org.eclipse.launchbar.core.descriptorType.default\:Tomcat v9.0 Server at localhost
 eclipse.preferences.version=1
-org.eclipse.launchbar.core.descriptorType.default\:activity_main.xml/activeLaunchMode=run
-org.eclipse.launchbar.core.descriptorType.default\:activity_main.xml/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
-org.eclipse.launchbar.core.descriptorType.default\:spring-mvc-study/activeLaunchMode=run
-org.eclipse.launchbar.core.descriptorType.default\:spring-mvc-study/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:JdbcTest/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:JdbcTest/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Tomcat\ v9.0\ Server\ at\ localhost/activeLaunchMode=debug
